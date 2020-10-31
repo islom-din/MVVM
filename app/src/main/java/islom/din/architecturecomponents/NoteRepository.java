@@ -18,11 +18,11 @@ public class NoteRepository {
     }
 
     public void insert(Note note) {
-        new InsertNoteAsyncTask(noteDao).execute();
+        new InsertNoteAsyncTask(noteDao).execute(note);
     }
 
     public void update(Note note) {
-        new UpdateNoteAsyncTask(noteDao).execute();
+        new UpdateNoteAsyncTask(noteDao).execute(note);
     }
 
     public void delete(Note note) {
